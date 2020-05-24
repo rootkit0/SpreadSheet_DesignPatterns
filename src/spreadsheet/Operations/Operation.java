@@ -1,3 +1,10 @@
+package spreadsheet.Operations;
+
+import spreadsheet.*;
+import spreadsheet.Values.MaybeValue;
+import spreadsheet.Values.NoValue;
+import spreadsheet.Values.SomeValue;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -25,7 +32,7 @@ public abstract class Operation implements Expression {
         if (val1.hasValue() && val2.hasValue()) {
             SomeValue some1 = (SomeValue) val1;
             SomeValue some2 = (SomeValue) val2;
-            return new SomeValue(operate(some1.getSomeValue(), some2.getSomeValue()));
+            return new SomeValue(operate(some1.getValue(), some2.getValue()));
         }
         else {
             return NoValue.getNoValue();

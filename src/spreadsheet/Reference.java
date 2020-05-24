@@ -1,3 +1,7 @@
+package spreadsheet;
+
+import spreadsheet.Values.MaybeValue;
+
 import java.util.HashSet;
 import java.util.Set;
 

@@ -1,3 +1,7 @@
+package spreadsheet.Operations;
+
+import spreadsheet.Expression;
+
 public class Plus extends Operation {
     public Plus(Expression expr1, Expression expr2) {
         super(expr1, expr2);

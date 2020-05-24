@@ -1,3 +1,7 @@
+package spreadsheet.Values;
+
+import spreadsheet.Cell;
+
 import java.util.HashSet;
 import java.util.Set;
 

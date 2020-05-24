@@ -1,3 +1,8 @@
+package spreadsheet;
+
+import spreadsheet.Operations.Operation;
+import spreadsheet.Values.MaybeValue;
+
 import java.util.Objects;
 import java.util.Observable;
 import java.util.Observer;

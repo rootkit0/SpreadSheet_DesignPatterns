@@ -1,3 +1,7 @@
+package spreadsheet.Values;
+
+import spreadsheet.Expression;
+
 public abstract class MaybeValue implements Expression {
     private boolean value;
 

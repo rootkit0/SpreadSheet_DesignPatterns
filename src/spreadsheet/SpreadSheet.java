@@ -1,3 +1,11 @@
+package spreadsheet;
+
+import spreadsheet.Exceptions.InvalidCell;
+import spreadsheet.Operations.Mult;
+import spreadsheet.Operations.Plus;
+import spreadsheet.Values.MaybeValue;
+import spreadsheet.Values.SomeValue;
+
 public class SpreadSheet {
     private static int SIZE = 5;
     private static final Sheet SHEET = new Sheet(SIZE);
@@ -71,16 +79,20 @@ public class SpreadSheet {
         return value;
     }
 
-    public static void put(String name, Expression expr) throws NoValidCell {
+    public static void put(String name, Expression expr) throws InvalidCell {
         SHEET.putExpression(name, expr);
     }
 
-    public static void put(String name, int value) throws NoValidCell {
+    public static void put(String name, int value) throws InvalidCell {
         SHEET.putExpression(name, new SomeValue(value));
     }
 
-    public static void put(String name, String refName) throws NoValidCell {
+    public static void put(String name, String refName) throws InvalidCell {
         Expression valor = new Reference(SHEET.getCell(refName));
         SHEET.putExpression(name, valor);
+    }
+
+    public static void clear() {
+        SHEET.clear();
     }
 }

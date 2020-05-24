@@ -1,3 +1,8 @@
+package spreadsheet;
+
+import spreadsheet.Exceptions.InvalidCell;
+import spreadsheet.Values.NoValue;
+
 import java.util.HashMap;
 
 public class Sheet {
@@ -33,7 +38,7 @@ public class Sheet {
         CELLS.put(key, cell);
     }
 
-    public void putExpression(String name, Expression expr) throws NoValidCell {
+    public void putExpression(String name, Expression expr) throws InvalidCell {
         CELLS.get(name).setExpr(expr);
     }
 }

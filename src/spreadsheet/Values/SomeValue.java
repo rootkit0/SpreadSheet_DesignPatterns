@@ -1,3 +1,7 @@
+package spreadsheet.Values;
+
+import spreadsheet.Cell;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,7 +13,7 @@ public class SomeValue extends MaybeValue {
         this.value = value;
     }
 
-    public int getSomeValue() {
+    public int getValue() {
         return this.value;
     }
 
